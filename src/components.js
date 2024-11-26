@@ -69,22 +69,22 @@ export const Block = {
 
       borderRadiusTopLeft: (x === 0 && y === 0),
       '.borderRadiusTopLeft': {
-        borderRadius: '1em 0.25em 0.25em 0.25em',
+        borderRadius: '0.75em 0.25em 0.25em 0.25em',
       },
 
       borderRadiusBottomLeft: (x === 0 && y === initY - 1),
       '.borderRadiusBottomLeft': {
-        borderRadius: '0.25em 0.25em 0.25em 1em',
+        borderRadius: '0.25em 0.25em 0.25em 0.75em',
       },
 
       borderRadiusTopRight: (x === initX - 1 && y === initY - 1),
       '.borderRadiusTopRight': {
-        borderRadius: '0.25em 0.25em 1em 0.25em',
+        borderRadius: '0.25em 0.25em 0.75em 0.25em',
       },
 
       borderRadiusBottomRight: (x === initX - 1 && y === 0),
       '.borderRadiusBottomRight': {
-        borderRadius: '0.25em 1em 0.25em 0.25em',
+        borderRadius: '0.25em 0.75em 0.25em 0.25em',
       },
     };
   },
@@ -102,7 +102,6 @@ export const Block = {
       }
 
       state.update({
-        ...state,
         selectedCount: (x + 1) * (y + 1),
         x: x + 1,
         y: y + 1,
@@ -215,7 +214,7 @@ export const ModalGridSelection = {
         props: {
           templateColumns: `repeat(${initX}, 1fr)`,
           templateRows: `repeat(${initY}, 1fr)`,
-          gap: 'Z',
+          gap: '6px',
           width: '514px',
           height: '298px',
         },
